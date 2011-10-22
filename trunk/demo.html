@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> WeatherJS Demo </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+	<div style="width:490px; margin:auto; position:relative;">
+		<canvas id="canvas" style="border: 1px solid;" width="490" height="368" ></canvas>
+	</div>
+	<script type="text/javascript" src="weather.js"></script>
+	<script language="javascript" type="text/javascript">
+	var weather = new Weather();
+	weather.setParameter('canvasid', 'canvas');
+	weather.setParameter('imageurl', 'scene.jpg');
+	weather.setParameter('rainon', true); 
+	weather.setParameter('raindensity', 180); 
+	weather.setParameter('raindropnumber', 1200); 
+	weather.setParameter('rainspeed', 6); 
+	weather.setParameter('raindiffspeed', 8); 
+	weather.setParameter('raincolor1', '#666677'); 
+	weather.setParameter('raincolor2', '#dddddd'); 
+	weather.setParameter('fogon', false);  
+	weather.setParameter('fogdensity', 4);
+	weather.setParameter('fogspeed', 2);
+	weather.setParameter('fogdirection', 'right');
+	weather.setParameter('fogmin', 10);
+	weather.setParameter('fogmax', 255);
+	weather.setParameter('fogmult', 270);
+	weather.setParameter('showfps', true);
+	weather.init();
+	weather.start();
+	</script>
+ </BODY>
+</HTML>
